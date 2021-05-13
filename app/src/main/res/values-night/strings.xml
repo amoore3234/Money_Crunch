@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto_loan_calculator">Auto Loan Calculator</string>
+    <string name="credit_card_loan_calculator">Credit Card Calculator</string>
+</resources>

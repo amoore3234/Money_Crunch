@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Money Crunch</string>
+    <string name="auto_loan_calculator">Auto Loan Calculator</string>
+    <string name="credit_card_loan_calculator">Credit Card Calculator</string>
+</resources>
