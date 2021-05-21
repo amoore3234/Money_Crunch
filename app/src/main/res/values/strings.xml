@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">Money Crunch</string>
     <string name="auto_loan_calculator">Auto Loan Calculator</string>
+    <string name="auto_amount">auto_amount</string>
+    <string name="auto_label">Loan Amount</string>
+    <string name="interest_text">In that time, you will pay</string>
+    <string name="interest_view_text">in interest.</string>
+    <string name="auto_apr">apr_amount</string>
+    <string name="apr_label">Apr</string>
+    <string name="auto_apr_edit">apr_edit</string>
+    <string name="duration_text">It will take you:</string>
+    <string name="auto_debt_text">to payoff your debt</string>
+    <string name="auto_duration">auto_duration</string>
+    <string name="duration_label">Duration</string>v
+    <string name="auto_duration_edit">auto_duration_edit</string>
+    <string name="auto_payment">auto_payment</string>
+    <string name="payment_label">Payment</string>
+    <string name="auto_paymet_edit">auto_payment_edit</string>
+    <string name="auto_total_amount">Your total loan amount is:</string>
+    <string name="auto_payoff_date">With a payoff date of:</string>
     <string name="credit_card_loan_calculator">Credit Card Calculator</string>
+
+
+
 </resources>
