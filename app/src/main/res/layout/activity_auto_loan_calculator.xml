@@ -48,6 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
+                    android:text="0.00"
                     android:textSize="18sp" />
 
 
@@ -73,6 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
+                    android:text="0.00"
                     android:textSize="18sp" />
 
 
@@ -94,7 +96,8 @@
                     android:id="@+id/auto_payment_edit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0.00" />
 
 
             </com.google.android.material.textfield.TextInputLayout>

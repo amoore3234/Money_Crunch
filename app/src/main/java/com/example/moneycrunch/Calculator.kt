@@ -7,12 +7,12 @@ class Calculator (
     private var stringDate:String = "Date"
 
     fun getDate(loan:Double, intRate:Double, payment:Double): String {
-            var dpr: Double = ((intRate / 365) * 30.417)
+            val dpr = ((intRate / 365) * 30.417)
             var monthlyInterest: Double
             var months = 0
-            var interest: Double = 0.00
-            var finalBalance: Double = 0.0
-            var principle: Double = 0.0
+            var interest = 0.0
+            var finalBalance: Double
+            var principle = 0.0
             var balance = loan
 
 
@@ -28,7 +28,6 @@ class Calculator (
                 if (principle > payment) {
                     val date = GetDate(months)
                     stringDate = date.payOffDate()
-                    balance = 0.0
                     break
                 }
                 months++
@@ -37,12 +36,12 @@ class Calculator (
     }
 
     fun getInterest(loan:Double, intRate:Double, payment:Double): Double {
-        var dpr: Double = ((intRate / 365) * 30.417)
+        val dpr = ((intRate / 365) * 30.417)
         var monthlyInterest: Double
         var months = 0
-        var interest: Double = 0.00
-        var finalBalance: Double = 0.0
-        var principle: Double = 0.0
+        var interest = 0.00
+        var finalBalance: Double
+        var principle = 0.0
         var balance = loan
 
 
@@ -58,7 +57,6 @@ class Calculator (
             if (principle > payment) {
                 val date = GetDate(months)
                 stringDate = date.payOffDate()
-                balance = 0.0
                 break
             }
             months++
@@ -66,12 +64,12 @@ class Calculator (
         return interest
     }
     fun getMonths(loan:Double, intRate:Double, payment:Double): Int {
-        var dpr: Double = ((intRate / 365) * 30.417)
+        val dpr = ((intRate / 365) * 30.417)
         var monthlyInterest: Double
         var months = 0
-        var interest: Double = 0.00
-        var finalBalance: Double = 0.0
-        var principle: Double = 0.0
+        var interest  = 0.00
+        var finalBalance: Double
+        var principle  = 0.0
         var balance = loan
 
 
@@ -87,7 +85,6 @@ class Calculator (
             if (principle > payment) {
                 val date = GetDate(months)
                 stringDate = date.payOffDate()
-                balance = 0.0
                 break
             }
             months++
@@ -96,12 +93,12 @@ class Calculator (
     }
 
     fun getYears(loan:Double, intRate:Double, payment:Double): Double {
-        var dpr: Double = ((intRate / 365) * 30.417)
+        val dpr = ((intRate / 365) * 30.417)
         var monthlyInterest: Double
         var months = 0
-        var interest: Double = 0.00
-        var finalBalance: Double = 0.0
-        var principle: Double = 0.0
+        var interest = 0.00
+        var finalBalance: Double
+        var principle = 0.0
         var balance = loan
 
 
@@ -117,7 +114,6 @@ class Calculator (
             if (principle > payment) {
                 val date = GetDate(months)
                 stringDate = date.payOffDate()
-                balance = 0.0
                 break
             }
             months++
@@ -126,12 +122,12 @@ class Calculator (
     }
 
     fun getTotalAmount(loan:Double, intRate:Double, payment:Double): Double {
-        var dpr: Double = ((intRate / 365) * 30.417)
+        val dpr = ((intRate / 365) * 30.417)
         var monthlyInterest: Double
         var months = 0
-        var interest: Double = 0.00
-        var finalBalance: Double = 0.0
-        var principle: Double = 0.0
+        var interest  = 0.00
+        var finalBalance: Double
+        var principle = 0.0
         var balance = loan
 
 
@@ -147,7 +143,6 @@ class Calculator (
             if (principle > payment) {
                 val date = GetDate(months)
                 stringDate = date.payOffDate()
-                balance = 0.0
                 break
             }
             months++
@@ -156,7 +151,7 @@ class Calculator (
     }
 
     fun getMinPayment(loan: Double, intRate: Double): Double {
-        var monthlyRate = ((intRate/365) * 30.417)
+        val monthlyRate = ((intRate/365) * 30.417)
         var minPayment = 0.0
 
         minPayment = (loan * .01) + monthlyRate
