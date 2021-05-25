@@ -171,7 +171,7 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
             val number = s.toString().toIntOrNull()
 
             if (number != null) {
-                if (number > 200000) {
+                if (number > 80000) {
                     if (s != null) {
                         s.replace(0, s.length, "0")
                         Toast.makeText(applicationContext, "Please enter values between $0 and $200,000", Toast.LENGTH_SHORT).show()

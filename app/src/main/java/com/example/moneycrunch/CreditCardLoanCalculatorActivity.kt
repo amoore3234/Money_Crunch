@@ -171,7 +171,7 @@ class CreditCardLoanCalculatorActivity : AppCompatActivity() {
             val number = s.toString().toIntOrNull()
 
             if (number != null) {
-                if (number > 100000) {
+                if (number > 15000) {
                     if (s != null) {
                         s.replace(0, s.length, "0")
                         Toast.makeText(applicationContext, "Please enter values between $0 and $100,000", Toast.LENGTH_SHORT).show()
@@ -207,7 +207,7 @@ class CreditCardLoanCalculatorActivity : AppCompatActivity() {
             val number = s.toString().toIntOrNull()
 
             if (number != null) {
-                if (number > 15) {
+                if (number > 30) {
                     if (s != null) {
                         s.replace(0, s.length, "0")
                         Toast.makeText(applicationContext, "Please enter values between 0 and 15", Toast.LENGTH_SHORT).show()
@@ -222,7 +222,7 @@ class CreditCardLoanCalculatorActivity : AppCompatActivity() {
 
         }
 
-
+        //Checks if the are emypty.
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             val loanString = binding.creditAmountEdit.text.toString()
             val intString = binding.creditAprEdit.text.toString()
@@ -268,8 +268,9 @@ class CreditCardLoanCalculatorActivity : AppCompatActivity() {
 
         }
 
-
+        //Checks if the inputs are empty.
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            val loan = binding.creditAmountEdit.text.toString().toDouble()
             val loanString = binding.creditAmountEdit.text.toString()
             val intString = binding.creditAprEdit.text.toString()
             val paymentString = binding.creditPaymentEdit.text.toString()
