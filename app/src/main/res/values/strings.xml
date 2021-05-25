@@ -2,27 +2,48 @@
     <string name="app_name">Money Crunch</string>
     <string name="auto_loan_calculator">Auto Loan Calculator</string>
     <string name="auto_amount">auto_amount</string>
-    <string name="auto_label">Loan Amount</string>
+    <string name="auto_label">Auto Loan</string>
     <string name="interest_text">In that time, you will pay</string>
     <string name="interest_view_text">in interest.</string>
     <string name="auto_apr">apr_amount</string>
-    <string name="apr_label">Apr</string>
+    <string name="apr_label">Interest Rate</string>
     <string name="auto_apr_edit">apr_edit</string>
     <string name="duration_text">It will take you:</string>
     <string name="auto_years">Years</string>
     <string name="auto_year">Year</string>
     <string name="auto_month">Month</string>
     <string name="auto_months">Months</string>
-    <string name="auto_debt_text">to payoff your debt</string>
+    <string name="auto_debt_text">to payoff your debt.</string>
     <string name="auto_duration">auto_duration</string>
-    <string name="duration_label">Duration</string>v
+    <string name="duration_label">Duration</string>
     <string name="auto_duration_edit">auto_duration_edit</string>
     <string name="auto_payment">auto_payment</string>
     <string name="payment_label">Payment</string>
     <string name="auto_paymet_edit">auto_payment_edit</string>
     <string name="auto_total_amount">Your total loan amount is:</string>
     <string name="auto_payoff_date">With a payoff date of:</string>
+    <string name="refresh">Refresh</string>
+    <string name="months">Months</string>
+    <string name="years">Years</string>
+    <string name="calculate">Calculate</string>
+    <string name="please_choose_a_calculator_to_use">Please choose a calculator to use</string>
+
     <string name="credit_card_loan_calculator">Credit Card Calculator</string>
+    <string name="credit_amount">credit_amount</string>
+    <string name="credit_label">Credit Card Loan</string>
+    <string name="credit_apr">credit_amount</string>
+    <string name="credit_apr_edit">credit_edit</string>
+    <string name="credit_years">Years</string>
+    <string name="credit_year">Year</string>
+    <string name="credit_month">Month</string>
+    <string name="credit_months">Months</string>
+    <string name="credit_debt_text">to payoff your debt.</string>
+    <string name="credit_duration">auto_duration</string>
+    <string name="credit_duration_edit">auto_duration_edit</string>
+    <string name="credit_payment">auto_payment</string>
+    <string name="credit_paymet_edit">auto_payment_edit</string>
+    <string name="credit_total_amount">Your total loan amount is:</string>
+    <string name="credit_payoff_date">With a payoff date of:</string>
 
 
 

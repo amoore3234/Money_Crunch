@@ -3,4 +3,9 @@
     <string name="auto_loan_calculator">Auto Loan Calculator</string>
     <string name="credit_card_loan_calculator">Credit Card Calculator</string>
     <string name="auto_label">Loan Amount</string>
+    <string name="refresh">Refresh</string>
+    <string name="months">Months</string>
+    <string name="years">Years</string>
+    <string name="calculate">Calculate</string>
+    <string name="please_choose_a_calculator_to_use">Please choose a calculator to use</string>
 </resources>

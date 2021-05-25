@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
-        android:text="Please choose a calculator to use"
+        android:layout_marginBottom="75dp"
+        android:text="@string/please_choose_a_calculator_to_use"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -80,10 +80,11 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/calCardView"
+            android:id="@+id/creditCardView"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="50dp"
+            android:onClick="creditCardLoan"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -94,17 +95,18 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/cal_loan"
+                    android:id="@+id/credit_card_loan"
                     android:layout_width="match_parent"
                     android:layout_height="154dp"
                     android:background="#F0EDF2"
                     android:paddingTop="5dp"
                     android:scaleType="centerCrop"
+                    android:onClick="creditCardLoan"
                     app:srcCompat="@drawable/ic_gcard"
                     tools:srcCompat="@drawable/ic_gcard" />
 
                 <TextView
-                    android:id="@+id/cal_textView"
+                    android:id="@+id/credit_textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="15dp"

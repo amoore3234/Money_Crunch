@@ -11,18 +11,18 @@ import android.view.MenuItem
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.moneycrunch.databinding.ActivityAutoLoanCalculatorBinding
+import com.example.moneycrunch.databinding.ActivityCreditCardLoanCalculatorBinding
 import java.text.DecimalFormat
 
 
-class AutoLoanCalculatorActivity : AppCompatActivity() {
+class CreditCardLoanCalculatorActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityAutoLoanCalculatorBinding
+    private lateinit var binding: ActivityCreditCardLoanCalculatorBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAutoLoanCalculatorBinding.inflate(layoutInflater)
+        binding = ActivityCreditCardLoanCalculatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val actionBar = supportActionBar
@@ -33,12 +33,12 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
 
 
         //Listening to text inputs.
-        binding.autoAmountEdit.addTextChangedListener(textWatcher)
-        binding.autoAprEdit.addTextChangedListener(maxInterest)
-        binding.autoPaymentEdit.addTextChangedListener(minPayment)
+        binding.creditAmountEdit.addTextChangedListener(textWatcher)
+        binding.creditAprEdit.addTextChangedListener(maxInterest)
+        binding.creditPaymentEdit.addTextChangedListener(minPayment)
 
         //Button to fire the calculator.
-        binding.autoButton.setOnClickListener { calcLoans() }
+        binding.creditButton.setOnClickListener { calcLoans() }
 
 
     }
@@ -54,7 +54,7 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.mi_refresh -> {
-                autoLoanActivity()
+                creditCardLoanActivity()
                 this.finish()
                 return true
             }
@@ -70,9 +70,9 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
     private fun calcLoans() {
 
         //Initializes the inputs within the app.
-        val loan = binding.autoAmountEdit.text.toString().toDouble()
-        val intRate = binding.autoAprEdit.text.toString().toDouble()
-        val payment = binding.autoPaymentEdit.text.toString().toDouble()
+        val loan = binding.creditAmountEdit.text.toString().toDouble()
+        val intRate = binding.creditAprEdit.text.toString().toDouble()
+        val payment = binding.creditPaymentEdit.text.toString().toDouble()
         val monthRadio = binding.radioMonths.isChecked
         val yearRadio = binding.radioYears.isChecked
         val currency = DecimalFormat("$###,###.##")
@@ -119,14 +119,14 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
 
         //Prints the results within Text Views
         binding.durationView.text = getString(R.string.duration_text)
-        binding.aTotalAmount.text = getString(R.string.auto_total_amount)
+        binding.cTotalAmount.text = getString(R.string.auto_total_amount)
         binding.durationDebt.text = getString(R.string.auto_debt_text)
         binding.interestView.text = getString(R.string.interest_text)
         binding.interestResultView.text = getString(R.string.interest_view_text)
         binding.finalPayoff.text = getString(R.string.auto_payoff_date)
         binding.interestResult.text = currency.format(aRate).toString()
-        binding.autoTotalAmount.text = currency.format(aPayoff).toString()
-        binding.autoPayoffDate.text = aDate
+        binding.creditTotalAmount.text = currency.format(aPayoff).toString()
+        binding.creditPayoffDate.text = aDate
 
         //Checks if the user enters zeros in the input fields.
         if (loan == 0.00 && intRate == 0.00 && payment == 0.00) {
@@ -148,14 +148,14 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
     //A method to display null results.
     private fun error() {
         binding.durationView.text = " "
-        binding.aTotalAmount.text = " "
+        binding.cTotalAmount.text = " "
         binding.durationDebt.text = " "
         binding.interestView.text = " "
         binding.interestResultView.text = " "
         binding.finalPayoff.text = " "
         binding.interestResult.text = " "
-        binding.autoTotalAmount.text = " "
-        binding.autoPayoffDate.text = " "
+        binding.creditTotalAmount.text = " "
+        binding.creditPayoffDate.text = " "
         binding.myDurationView.text = " "
         binding.myDurationResult.text = " "
 
@@ -171,10 +171,10 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
             val number = s.toString().toIntOrNull()
 
             if (number != null) {
-                if (number > 200000) {
+                if (number > 100000) {
                     if (s != null) {
                         s.replace(0, s.length, "0")
-                        Toast.makeText(applicationContext, "Please enter values between $0 and $200,000", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, "Please enter values between $0 and $100,000", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -188,13 +188,13 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
 
 
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            val loanString = binding.autoAmountEdit.text.toString()
-            val intString = binding.autoAprEdit.text.toString()
-            val paymentString = binding.autoPaymentEdit.text.toString()
+            val loanString = binding.creditAmountEdit.text.toString()
+            val intString = binding.creditAprEdit.text.toString()
+            val paymentString = binding.creditPaymentEdit.text.toString()
 
-            binding.autoPaymentEdit.isEnabled = !TextUtils.isEmpty(loanString) && loanString != "0"
+            binding.creditPaymentEdit.isEnabled = !TextUtils.isEmpty(loanString) && loanString != "0"
 
-            binding.autoButton.isEnabled = !TextUtils.isEmpty(loanString) && !TextUtils.isEmpty(intString) && !TextUtils.isEmpty(paymentString)
+            binding.creditButton.isEnabled = !TextUtils.isEmpty(loanString) && !TextUtils.isEmpty(intString) && !TextUtils.isEmpty(paymentString)
         }
 
     }
@@ -224,12 +224,12 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
 
 
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            val loanString = binding.autoAmountEdit.text.toString()
-            val intString = binding.autoAprEdit.text.toString()
-            val paymentString = binding.autoPaymentEdit.text.toString()
+            val loanString = binding.creditAmountEdit.text.toString()
+            val intString = binding.creditAprEdit.text.toString()
+            val paymentString = binding.creditPaymentEdit.text.toString()
 
 
-            binding.autoButton.isEnabled = !TextUtils.isEmpty(loanString) && !TextUtils.isEmpty(intString) && !TextUtils.isEmpty(paymentString)
+            binding.creditButton.isEnabled = !TextUtils.isEmpty(loanString) && !TextUtils.isEmpty(intString) && !TextUtils.isEmpty(paymentString)
         }
 
     }
@@ -238,8 +238,8 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
     * minimum payment. Button remains disabled until minimum amount is satisfied.*/
     private val minPayment = object : TextWatcher {
         override fun afterTextChanged(s: Editable?) {
-            val loan = binding.autoAmountEdit.text.toString().toDouble()
-            val intRate = binding.autoAprEdit.text.toString().toDouble()
+            val loan = binding.creditAmountEdit.text.toString().toDouble()
+            val intRate = binding.creditAprEdit.text.toString().toDouble()
             val cal = Calculator()
             val pay = cal.getMinPayment(loan, intRate)
             val currency = DecimalFormat("$###,###.##")
@@ -248,10 +248,12 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
 
             if (number != null) {
                 if (number < pay) {
-                    binding.autoButton.isEnabled = false
+                    binding.creditButton.isEnabled = false
                     if (s != null && s.length < 3) {
-                        Toast.makeText(applicationContext, "Please enter values between ${currency.format(pay)}  and ${currency.format(loan)}.", Toast.LENGTH_SHORT).show()
-                        binding.autoButton.isEnabled = false
+                        Toast.makeText(applicationContext, "Please enter values between ${currency.format(pay)} and ${currency.format(loan)}.", Toast.LENGTH_SHORT).show()
+                        binding.creditButton.isEnabled = false
+                    } else {
+                        binding.creditButton.isEnabled = false
                     }
 
                 }
@@ -263,23 +265,24 @@ class AutoLoanCalculatorActivity : AppCompatActivity() {
 
         override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
+
         }
 
 
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            val loanString = binding.autoAmountEdit.text.toString()
-            val intString = binding.autoAprEdit.text.toString()
-            val paymentString = binding.autoPaymentEdit.text.toString()
+            val loanString = binding.creditAmountEdit.text.toString()
+            val intString = binding.creditAprEdit.text.toString()
+            val paymentString = binding.creditPaymentEdit.text.toString()
 
 
-            binding.autoButton.isEnabled = !TextUtils.isEmpty(loanString) && !TextUtils.isEmpty(intString) && !TextUtils.isEmpty(paymentString)
+            binding.creditButton.isEnabled = !TextUtils.isEmpty(loanString) && !TextUtils.isEmpty(intString) && !TextUtils.isEmpty(paymentString)
         }
 
     }
 
     //Method to restart the app.
-    private fun autoLoanActivity() {
-        val intent = Intent(this, AutoLoanCalculatorActivity::class.java)
+    private fun creditCardLoanActivity() {
+        val intent = Intent(this, CreditCardLoanCalculatorActivity::class.java)
 
         startActivity(intent)
     }

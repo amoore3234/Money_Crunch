@@ -30,21 +30,21 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/auto_amount"
+                android:id="@+id/credit_amount"
                 android:layout_width="163dp"
                 android:layout_height="64dp"
                 android:layout_marginTop="50dp"
                 android:background="@color/white"
-                android:hint="@string/auto_label"
+                android:hint="@string/credit_label"
                 android:inputType="numberDecimal"
-                app:layout_constraintBottom_toTopOf="@+id/auto_apr"
+                app:layout_constraintBottom_toTopOf="@+id/credit_apr"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/auto_amount_edit"
+                    android:id="@+id/credit_amount_edit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
@@ -56,7 +56,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/auto_apr"
+                android:id="@+id/credit_apr"
                 android:layout_width="160dp"
                 android:layout_height="64dp"
                 android:layout_marginTop="8dp"
@@ -64,13 +64,13 @@
                 android:background="@color/white"
                 android:hint="@string/apr_label"
                 android:inputType="numberDecimal"
-                app:layout_constraintBottom_toTopOf="@+id/auto_payment"
+                app:layout_constraintBottom_toTopOf="@+id/credit_payment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/auto_amount">
+                app:layout_constraintTop_toBottomOf="@+id/credit_amount">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/auto_apr_edit"
+                    android:id="@+id/credit_apr_edit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
@@ -81,7 +81,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/auto_payment"
+                android:id="@+id/credit_payment"
                 android:layout_width="160dp"
                 android:layout_height="64dp"
                 android:background="@color/white"
@@ -90,10 +90,10 @@
                 app:layout_constraintBottom_toTopOf="@+id/radio_group"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/auto_apr">
+                app:layout_constraintTop_toBottomOf="@+id/credit_apr">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/auto_payment_edit"
+                    android:id="@+id/credit_payment_edit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:enabled="false"
@@ -105,7 +105,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/auto_button"
+                android:id="@+id/credit_button"
                 android:layout_width="160dp"
                 android:layout_height="54dp"
                 android:layout_marginStart="8dp"
@@ -123,10 +123,10 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="7dp"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@+id/auto_button"
+                app:layout_constraintBottom_toTopOf="@+id/credit_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/auto_payment">
+                app:layout_constraintTop_toBottomOf="@+id/credit_payment">
 
                 <RadioButton
                     android:id="@+id/radio_years"
@@ -213,7 +213,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
             app:layout_constraintTop_toBottomOf="@+id/my_duration_view"
-            tools:text="@string/auto_debt_text" />
+            tools:text="@string/credit_debt_text" />
 
         <TextView
             android:id="@+id/my_duration_view"
@@ -262,7 +262,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/a_total_amount"
+        android:id="@+id/c_total_amount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -270,15 +270,15 @@
         android:textColor="#07650B"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/auto_total_amount"
+        app:layout_constraintBottom_toTopOf="@+id/credit_total_amount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-        tools:text="@string/auto_total_amount" />
+        tools:text="@string/credit_total_amount" />
 
     <TextView
-        android:id="@+id/auto_total_amount"
+        android:id="@+id/credit_total_amount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -288,7 +288,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/a_total_amount"
+        app:layout_constraintTop_toBottomOf="@+id/c_total_amount"
         tools:text="$00.00" />
 
     <TextView
@@ -301,14 +301,14 @@
         android:textColor="#07650B"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/auto_payoff_date"
+        app:layout_constraintBottom_toTopOf="@+id/credit_payoff_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/auto_total_amount"
-        tools:text="@string/auto_payoff_date" />
+        app:layout_constraintTop_toBottomOf="@+id/credit_total_amount"
+        tools:text="@string/credit_payoff_date" />
 
     <TextView
-        android:id="@+id/auto_payoff_date"
+        android:id="@+id/credit_payoff_date"
         android:layout_width="411dp"
         android:layout_height="65dp"
         android:layout_marginTop="4dp"

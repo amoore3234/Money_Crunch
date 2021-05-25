@@ -3,18 +3,18 @@ package com.example.moneycrunch
 import java.text.DateFormat
 import java.util.*
 
+//Class that calculates the current date.
 class GetDate(private val getMonth: Int) {
 
-    lateinit var formatFuture:String
+    private lateinit var formatFuture: String
 
     fun payOffDate() : String {
 
         val finalDate = getMonth
         val calendar: Calendar = Calendar.getInstance()
-        val dateTime: Date = calendar.getTime()
         calendar.add(Calendar.MONTH, finalDate + 1)
         calendar.add(Calendar.YEAR, 0)
-        val future: Date = calendar.getTime()
+        val future: Date = calendar.time
          formatFuture = DateFormat.getDateInstance().format(future)
 
         return formatFuture
