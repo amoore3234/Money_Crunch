@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     tools:context=".AutoLoanCalculatorActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,7 +11,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="270dp"
-        android:background="@drawable/my_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="200dp"
-            android:background="@drawable/my_border2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -34,7 +31,6 @@
                 android:layout_width="163dp"
                 android:layout_height="64dp"
                 android:layout_marginTop="50dp"
-                android:background="@color/white"
                 android:hint="@string/auto_label"
                 android:inputType="numberDecimal"
                 app:layout_constraintBottom_toTopOf="@+id/auto_apr"
@@ -62,7 +58,6 @@
                 android:layout_height="64dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/white"
                 android:hint="@string/apr_label"
                 android:inputType="numberDecimal"
                 app:layout_constraintBottom_toTopOf="@+id/auto_payment"
@@ -86,7 +81,6 @@
                 android:id="@+id/auto_payment"
                 android:layout_width="160dp"
                 android:layout_height="64dp"
-                android:background="@color/white"
                 android:hint="@string/payment_label"
                 android:inputType="numberDecimal"
                 app:layout_constraintBottom_toTopOf="@+id/radio_group"
@@ -101,7 +95,7 @@
                     android:enabled="false"
                     android:inputType="numberDecimal"
                     android:selectAllOnFocus="true"
-                    android:text="@string/auto_amount"
+                    android:text="@string/amount_text"
                     android:textSize="18sp" />
 
 
@@ -113,6 +107,7 @@
                 android:layout_height="54dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="11dp"
+                android:backgroundTint="@color/background_color_calculate_button"
                 android:enabled="false"
                 android:text="@string/calculate"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -126,6 +121,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="7dp"
                 android:orientation="horizontal"
+                android:theme="@style/RadioButtonStyle"
                 app:layout_constraintBottom_toTopOf="@+id/auto_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -135,14 +131,16 @@
                     android:id="@+id/radio_years"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/black"
+                    android:button="@drawable/custom_radiobutton"
+                    android:buttonTint="#09bd06"
                     android:text="@string/years" />
 
                 <RadioButton
                     android:id="@+id/radio_months"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/black"
+                    android:button="@drawable/custom_radiobutton"
+                    android:buttonTint="#09db06"
                     android:text="@string/months"
                     app:layout_constraintEnd_toEndOf="parent" />
             </RadioGroup>
@@ -156,7 +154,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="63dp"
             android:textAlignment="center"
-            android:textColor="#07650B"
+            android:textColor="#029A08"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -170,7 +168,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="4dp"
             android:textAlignment="center"
-            android:textColor="#07650B"
+            android:textColor="#029A08"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -184,7 +182,7 @@
             android:layout_height="25dp"
             android:layout_marginTop="21dp"
             android:textAlignment="center"
-            android:textColor="#07650B"
+            android:textColor="#029A08"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/interest_result"
             app:layout_constraintEnd_toEndOf="parent"
@@ -210,7 +208,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:textColor="#07650B"
+            android:textColor="#029A08"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -261,6 +259,16 @@
             app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
             app:layout_constraintTop_toBottomOf="@+id/interest_view"
             tools:text="$00.00" />
+
+        <TextView
+            android:id="@+id/vert_line"
+            android:layout_width="2dp"
+            android:layout_height="462dp"
+            android:background="#E9DFF7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/duration_view"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -325,6 +333,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/final_payoff"
         tools:text="Date" />
+
+    <TextView
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="17dp"
+        android:background="#E9DFF7"
+        app:layout_constraintBottom_toTopOf="@+id/a_total_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

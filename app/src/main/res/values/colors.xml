@@ -14,4 +14,5 @@
     <color name="background_color">#FFFFFFFF</color>
     <color name="background_color2">#fafafa</color>
     <color name="num_border_color">#f5f6f7</color>
+    <color name="card_border">#dad6d6</color>
 </resources>

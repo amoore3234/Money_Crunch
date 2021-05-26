@@ -15,7 +15,7 @@
         android:layout_marginBottom="75dp"
         android:text="@string/please_choose_a_calculator_to_use"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="#029A08"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,37 +44,31 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:onClick="autoLoan"
-            app:cardBackgroundColor="#F0EDF2"
+            app:cardBackgroundColor="#449136"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
+            <ImageButton
+                android:id="@+id/autoLoan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#F0EDF2"
-                android:orientation="vertical">
+                android:background="#FFFFFF"
+                android:onClick="autoLoan"
+                android:backgroundTint="@color/background_color_image_button"
+                android:paddingBottom="50dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_car"
+                tools:srcCompat="@drawable/ic_car" />
 
-                <ImageButton
-                    android:id="@+id/autoLoan"
-                    android:layout_width="match_parent"
-                    android:layout_height="154dp"
-                    android:background="#F0EDF2"
-                    android:onClick="autoLoan"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_gcar"
-                    tools:srcCompat="@drawable/ic_car" />
-
-                <TextView
-                    android:id="@+id/autoTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="15dp"
-                    android:text="@string/auto_loan_calculator"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/autoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="160dp"
+                android:text="@string/auto_loan_calculator"
+                android:textAlignment="center"
+                android:textColor="?attr/colorPrimaryVariant"
+                android:textSize="18sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -85,37 +79,31 @@
             android:layout_height="200dp"
             android:layout_marginTop="50dp"
             android:onClick="creditCardLoan"
+            app:cardBackgroundColor="#449136"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <LinearLayout
+            <ImageButton
+                android:id="@+id/credit_card_loan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#F0EDF2"
-                android:orientation="vertical">
+                android:background="#FFFFFF"
+                android:onClick="creditCardLoan"
+                android:backgroundTint="@color/background_color_image_button"
+                android:paddingBottom="45dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_gcard"
+                tools:srcCompat="@drawable/ic_gcard" />
 
-                <ImageButton
-                    android:id="@+id/credit_card_loan"
-                    android:layout_width="match_parent"
-                    android:layout_height="154dp"
-                    android:background="#F0EDF2"
-                    android:paddingTop="5dp"
-                    android:scaleType="centerCrop"
-                    android:onClick="creditCardLoan"
-                    app:srcCompat="@drawable/ic_gcard"
-                    tools:srcCompat="@drawable/ic_gcard" />
-
-                <TextView
-                    android:id="@+id/credit_textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="15dp"
-                    android:text="@string/credit_card_loan_calculator"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/credit_textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="160dp"
+                android:text="@string/credit_card_loan_calculator"
+                android:textAlignment="center"
+                android:textColor="?attr/colorPrimaryVariant"
+                android:textSize="18sp" />
 
 
         </androidx.cardview.widget.CardView>

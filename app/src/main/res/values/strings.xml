@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Title of the app-->
     <string name="app_name">Money Crunch</string>
@@ -24,9 +25,9 @@
     <string name="interest_text">In that time, you will pay</string>
     <string name="interest_view_text">in interest.</string>
 
-    <string name="apr_label">Interest Rate</string>
-    <string name="apr_text">10%</string>
-    <string name="amount_text">$0.00</string>
+    <string name="apr_label">APR</string>
+    <string name="apr_text">0.00</string>
+    <string name="amount_text">0.00</string>
 
     <string name="duration_text">It will take you:</string>
     <string name="duration_label">Duration</string>
@@ -55,7 +56,6 @@
     <string name="credit_paymet_edit">auto_payment_edit</string>
     <string name="credit_total_amount">Your total loan amount is:</string>
     <string name="credit_payoff_date">With a payoff date of:</string>
-
 
 
 </resources>

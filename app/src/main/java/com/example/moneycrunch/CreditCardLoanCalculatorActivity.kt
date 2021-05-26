@@ -28,7 +28,7 @@ class CreditCardLoanCalculatorActivity : AppCompatActivity() {
         val actionBar = supportActionBar
 
 
-        actionBar!!.title = "Auto Loan Calculator"
+        actionBar!!.title = "Credit Card Loan Calculator"
         actionBar.setDisplayHomeAsUpEnabled(true)
 
 
